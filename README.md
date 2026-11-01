@@ -28,6 +28,7 @@ An Embodied Agent for Collaborative Tabletop Creation and Local Editing.
 | [Background](docs/Background.md) | 项目背景、系统架构、五阶段计划与实验设计；v2.4.2，2026-11-01，已更新 Kinova 硬件信息 |
 | [ABCD 研究分工与协作 Version 2](docs/ABCD研究分工与协作_Version2.md) | 四人职责、协作接口与分阶段验收 |
 | [原始任务要求](docs/原始任务要求.md) | PuzzleMate 课程任务的截图文字整理与来源说明 |
+| [第一版技术流程（Word）](docs/JARVIS第一版技术流程.docx) | 组内交流用的流程图及各阶段说明，π0.5 为待验证的候选 VLA |
 
 ## 团队分工
 
