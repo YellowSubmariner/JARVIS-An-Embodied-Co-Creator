@@ -6,9 +6,18 @@ An Embodied Agent for Collaborative Tabletop Creation and Local Editing.
 
 工程导论课程项目，计划利用 **Kinova 7 自由度机械臂**，让用户通过自然语言与机械臂共同修改桌面积木作品。例如：“把屋顶的三块积木换成蓝色，窗户保持不变。”系统需要记住已完成的步骤、保留人工修改，并根据实际执行结果接续任务。
 
-当前仓库用于维护项目方案与协作文档，文中的功能和阶段均为实施与验收目标。模型选型、真机接入和实际表现以后续代码与测试记录为准。
+当前仓库用于维护项目方案与协作文档，完整共创系统的功能和阶段仍为实施与验收目标；已发布的现场辅助软件见下方“辅助软件”部分。模型选型、真机接入和实际表现以代码与测试记录为准。
 
 **硬件接入更新（2026-11-02）：已通过 Kortex API 核实为 Kinova Gen3 Ultra Lightweight Robot（L53K，7 自由度），夹爪为 Robotiq 2F-85。本机通过网线访问 `192.168.1.10`，已使用 Python Kortex SDK `2.8.0.post5` 完成登录、状态读取及 J2/J3 角度参考登记。新电脑配置、现场手动摆位后标定及 Codex 提示词见 [Kinova_Kortex_Windows_从零配置与关节标定指南](docs/Kinova_Kortex_Windows_从零配置与关节标定指南.md)。腕部视觉模块已重新被设备列表识别，视频画面仍待验收。现场操作者报告此前已成功进行 VLA 推理；具体模型、动作适配和任务表现仍需项目验收记录。原先针对 FR3／DROID 的模型适配假设需重新验证。**
+
+## 辅助软件：JARVIS Robot Console
+
+我们已为本项目开发并独立发布 [JARVIS Robot Console](https://github.com/YellowSubmariner/JARVIS-Robot-Console)，作为 Windows 现场视觉辅助软件。当前提供**腕部相机**和 **Astra 全局相机**两个页面，支持两路独立取流、连接与重连、断线自动重试和截图，并为后续增加功能页面预留结构。
+
+- **软件仓库与使用说明：** [YellowSubmariner/JARVIS-Robot-Console](https://github.com/YellowSubmariner/JARVIS-Robot-Console)
+- **Windows 下载：** [v0.1.0 发布页](https://github.com/YellowSubmariner/JARVIS-Robot-Console/releases/tag/v0.1.0)，完整解压后运行 `JARVIS_Robot_Console.exe`。
+
+当前版本用于视频监看和现场联调，机械臂运动控制、坐标标定与 VLA 执行仍需分别接入和验收。腕部视觉模块已重新被设备列表识别，视频画面仍待验收。
 
 ## 技术路线
 
