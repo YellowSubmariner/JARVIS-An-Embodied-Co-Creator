@@ -8,7 +8,7 @@ An Embodied Agent for Collaborative Tabletop Creation and Local Editing.
 
 当前仓库用于维护项目方案与协作文档，文中的功能和阶段均为实施与验收目标。模型选型、真机接入和实际表现以后续代码与测试记录为准。
 
-**硬件信息更新（2026-11-01）：已改用 Kinova 7 自由度机械臂，通过网线连接并通过网页操纵。用户回忆可能是 Gen3，但具体型号尚未核实；网线连接到电脑还是交换机、网页平台名称、API 开放情况、夹爪及腕部视觉配置均待确认。若确认为 Gen3，再评估与固件匹配的 Kortex API。原先针对 FR3／DROID 的模型适配假设需重新验证。**
+**硬件接入更新（2026-11-02）：已通过 Kortex API 核实为 Kinova Gen3 Ultra Lightweight Robot（L53K，7 自由度），夹爪为 Robotiq 2F-85。本机通过网线访问 `192.168.1.10`，已使用 Python Kortex SDK `2.8.0.post5` 完成登录、状态读取及 J2/J3 角度参考登记。新电脑配置、现场手动摆位后标定及 Codex 提示词见 [Kinova_Kortex_Windows_从零配置与关节标定指南](docs/Kinova_Kortex_Windows_从零配置与关节标定指南.md)。腕部视觉模块已重新被设备列表识别，视频画面仍待验收。现场操作者报告此前已成功进行 VLA 推理；具体模型、动作适配和任务表现仍需项目验收记录。原先针对 FR3／DROID 的模型适配假设需重新验证。**
 
 ## 技术路线
 
@@ -25,7 +25,8 @@ An Embodied Agent for Collaborative Tabletop Creation and Local Editing.
 
 | 文档 | 内容 |
 | --- | --- |
-| [Background](docs/Background.md) | 项目背景、系统架构、五阶段计划与实验设计；v2.4.2，2026-11-01，已更新 Kinova 硬件信息 |
+| [Background](docs/Background.md) | 项目背景、系统架构、五阶段计划与实验设计；v2.4.3，2026-11-02，已核实 Gen3 型号与 Kortex API 接入 |
+| [Kinova Gen3 Windows/Kortex 配置与 J2/J3 标定指南](docs/Kinova_Kortex_Windows_从零配置与关节标定指南.md) | 新电脑网络、Python、SDK 校验、只读检查、手动摆位标定与 Codex 提示词 |
 | [ABCD 研究分工与协作 Version 2](docs/ABCD研究分工与协作_Version2.md) | 四人职责、协作接口与分阶段验收 |
 | [原始任务要求](docs/原始任务要求.md) | PuzzleMate 课程任务的截图文字整理与来源说明 |
 | [第一版技术流程（Word）](docs/JARVIS第一版技术流程.docx) | 组内交流用的流程图及各阶段说明，π0.5 为待验证的候选 VLA |
