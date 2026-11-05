@@ -34,20 +34,11 @@ An Embodied Agent for Collaborative Tabletop Creation and Local Editing.
 
 | 文档 | 内容 |
 | --- | --- |
-| [Background](docs/Background.md) | 项目背景、系统架构、五阶段计划与实验设计；v2.4.3，2026-11-02，已核实 Gen3 型号与 Kortex API 接入 |
+| [JARVIS 零基础实施、训练与部署指南](docs/JARVIS_零基础实施训练与部署指南.md) | 新人入门、数据采集、代码与权重下载、约 48 小时 GPU 安排、Windows 游戏本部署和验收；2026-11-05 |
+| [Background](docs/Background.md) | 项目背景、系统架构、五阶段计划与实验设计；v2.4.4，2026-11-05；保留已核实的 Gen3 与 Kortex 接入记录，按模块说明协作接口 |
 | [Kinova Gen3 Windows/Kortex 配置与 J2/J3 标定指南](docs/Kinova_Kortex_Windows_从零配置与关节标定指南.md) | 新电脑网络、Python、SDK 校验、只读检查、手动摆位标定与 Codex 提示词 |
-| [ABCD 研究分工与协作 Version 2](docs/ABCD研究分工与协作_Version2.md) | 四人职责、协作接口与分阶段验收 |
 | [原始任务要求](docs/原始任务要求.md) | PuzzleMate 课程任务的截图文字整理与来源说明 |
 | [第一版技术流程（Word）](docs/JARVIS第一版技术流程.docx) | 组内交流用的流程图及各阶段说明，π0.5 为待验证的候选 VLA |
-
-## 团队分工
-
-| 成员 | 主要职责 |
-| --- | --- |
-| A | 语言理解与人机交互 |
-| B | 视觉感知与执行结果检查 |
-| C | Harness、Memory、局部规划与恢复调度 |
-| D | VLA、机械臂适配、数据采集与微调 |
 
 ## 推进计划
 
@@ -61,6 +52,6 @@ An Embodied Agent for Collaborative Tabletop Creation and Local Editing.
 
 ## 文档维护
 
-后续以仓库 `docs/` 中的文档为维护入口。调整技术路线或分工时，同步更新 Background、分工文档及本 README，并注明日期与版本；原始任务要求保留为课程需求依据。实施进展和实验结论应附对应代码或测试记录。
+后续以仓库 `docs/` 中的文档为维护入口。调整技术路线、接口或实施安排时，同步更新 Background、实施指南及本 README，并注明日期与版本；原始任务要求保留为课程需求依据。实施进展和实验结论应附对应代码或测试记录。
 
 GitHub：[YellowSubmariner/JARVIS-An-Embodied-Co-Creator](https://github.com/YellowSubmariner/JARVIS-An-Embodied-Co-Creator)
