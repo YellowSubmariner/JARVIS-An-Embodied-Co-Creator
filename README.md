@@ -34,6 +34,7 @@ An Embodied Agent for Collaborative Tabletop Creation and Local Editing.
 
 | 文档 | 内容 |
 | --- | --- |
+| [JARVIS 分阶段任务清单](docs/JARVIS_分阶段任务清单.md) | P0–P7 的可勾选任务、交付物、阶段通过条件和 GPU 总预算；按任务认领，2026-11-05 |
 | [JARVIS 零基础实施、训练与部署指南](docs/JARVIS_零基础实施训练与部署指南.md) | 新人入门、数据采集、代码与权重下载、约 48 小时 GPU 安排、Windows 游戏本部署和验收；2026-11-05 |
 | [Background](docs/Background.md) | 项目背景、系统架构、五阶段计划与实验设计；v2.4.4，2026-11-05；保留已核实的 Gen3 与 Kortex 接入记录，按模块说明协作接口 |
 | [Kinova Gen3 Windows/Kortex 配置与 J2/J3 标定指南](docs/Kinova_Kortex_Windows_从零配置与关节标定指南.md) | 新电脑网络、Python、SDK 校验、只读检查、手动摆位标定与 Codex 提示词 |
