@@ -36,6 +36,7 @@ An Embodied Agent for Collaborative Tabletop Creation and Local Editing.
 
 | 文档 | 内容 |
 | --- | --- |
+| [开题报告叙事与结构建议](docs/Project_JARVIS_开题报告叙事与结构建议.md) | 以“赛博造物”统一背景、项目目标与创新点，衔接十章报告结构；2026-11-07 |
 | [π0.5：Kinova 数据采集与微调部署指南](docs/PI05_Kinova_数据采集与微调部署指南.md) | 关节角生成动作标签、双相机与 Kortex 采集、数据转换、权重下载、LoRA 训练及部署；当前操作入口 |
 | [JARVIS 分阶段任务清单](docs/JARVIS_分阶段任务清单.md) | P0–P7 的可勾选任务、交付物、阶段通过条件和 GPU 总预算；2026-11-06 |
 | [JARVIS 实施总览](docs/JARVIS_零基础实施训练与部署指南.md) | 项目模块、开发顺序、Agent 并行工作、约 48 小时 GPU 预算与课程验收；保留原文件路径 |
