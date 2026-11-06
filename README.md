@@ -8,7 +8,9 @@ An Embodied Agent for Collaborative Tabletop Creation and Local Editing.
 
 当前仓库用于维护项目方案与协作文档，完整共创系统的功能和阶段仍为实施与验收目标；已发布的现场辅助软件见下方“辅助软件”部分。模型选型、真机接入和实际表现以代码与测试记录为准。
 
-**硬件接入更新（2026-11-02）：已通过 Kortex API 核实为 Kinova Gen3 Ultra Lightweight Robot（L53K，7 自由度），夹爪为 Robotiq 2F-85。本机通过网线访问 `192.168.1.10`，已使用 Python Kortex SDK `2.8.0.post5` 完成登录、状态读取及 J2/J3 角度参考登记。新电脑配置、现场手动摆位后标定及 Codex 提示词见 [Kinova_Kortex_Windows_从零配置与关节标定指南](docs/Kinova_Kortex_Windows_从零配置与关节标定指南.md)。腕部视觉模块已重新被设备列表识别，视频画面仍待验收。现场操作者报告此前已成功进行 VLA 推理；具体模型、动作适配和任务表现仍需项目验收记录。原先针对 FR3／DROID 的模型适配假设需重新验证。**
+**当前路线（2026-11-06）：选择 π0.5，以 LeRobot 的 PyTorch＋LoRA 路线开展自采 Kinova 数据微调。此前的 VLA 代码和权重无法取得；团队报告已有控制程序或遥操作可完成取放，下一步检查其接口并接入录制。现场电脑承担采集、控制、数据处理与 Agent 开发；π0.5 的本地推理尚未验证，训练与备用推理资源需先小规模试跑。具体电脑清单在团队本地保存。**
+
+**硬件接入更新（2026-11-02）：已通过 Kortex API 核实为 Kinova Gen3 Ultra Lightweight Robot（L53K，7 自由度），夹爪为 Robotiq 2F-85。通过网线连接机械臂，已使用 Python Kortex SDK 完成登录、状态读取及 J2/J3 角度参考登记。新电脑配置、现场手动摆位后标定及 Codex 提示词见 [Kinova_Kortex_Windows_从零配置与关节标定指南](docs/Kinova_Kortex_Windows_从零配置与关节标定指南.md)。腕部视觉模块已重新被设备列表识别，视频画面仍待验收。现场操作者报告此前已成功进行 VLA 推理；具体模型、动作适配和任务表现仍需项目验收记录。原先针对 FR3／DROID 的模型适配假设需重新验证。**
 
 ## 辅助软件：JARVIS Robot Console
 
@@ -30,16 +32,17 @@ An Embodied Agent for Collaborative Tabletop Creation and Local Editing.
 
 ## 项目文档
 
-**每次承接、交接或恢复本项目，必须先阅读本 README 和以下全部维护 Markdown 的当前版本；方案、分工、接口或硬件信息变化时，必须同步更新相关文档。不能只凭聊天记录或旧版副本继续工作。**
+从 [文档导航](docs/README.md) 按当前任务阅读。承接、交接或恢复项目时，先读本 README、项目方案、实施总览和任务清单，再读对应专题；修改方案、接口或硬件信息时，同步更新相关文档。能力结论应有代码与测试记录，不能只凭聊天或旧版副本继续工作。
 
 | 文档 | 内容 |
 | --- | --- |
-| [JARVIS 分阶段任务清单](docs/JARVIS_分阶段任务清单.md) | P0–P7 的可勾选任务、交付物、阶段通过条件和 GPU 总预算；按任务认领，2026-11-05 |
-| [JARVIS 零基础实施、训练与部署指南](docs/JARVIS_零基础实施训练与部署指南.md) | 新人入门、数据采集、代码与权重下载、约 48 小时 GPU 安排、Windows 游戏本部署和验收；2026-11-05 |
-| [Background](docs/Background.md) | 项目背景、系统架构、五阶段计划与实验设计；v2.4.4，2026-11-05；保留已核实的 Gen3 与 Kortex 接入记录，按模块说明协作接口 |
+| [π0.5：Kinova 数据采集与微调部署指南](docs/PI05_Kinova_数据采集与微调部署指南.md) | 关节角生成动作标签、双相机与 Kortex 采集、数据转换、权重下载、LoRA 训练及部署；当前操作入口 |
+| [JARVIS 分阶段任务清单](docs/JARVIS_分阶段任务清单.md) | P0–P7 的可勾选任务、交付物、阶段通过条件和 GPU 总预算；2026-11-06 |
+| [JARVIS 实施总览](docs/JARVIS_零基础实施训练与部署指南.md) | 项目模块、开发顺序、Agent 并行工作、约 48 小时 GPU 预算与课程验收；保留原文件路径 |
+| [Background](docs/Background.md) | 项目背景、系统架构、五阶段计划与实验设计；v2.4.5，2026-11-06 |
 | [Kinova Gen3 Windows/Kortex 配置与 J2/J3 标定指南](docs/Kinova_Kortex_Windows_从零配置与关节标定指南.md) | 新电脑网络、Python、SDK 校验、只读检查、手动摆位标定与 Codex 提示词 |
 | [原始任务要求](docs/原始任务要求.md) | PuzzleMate 课程任务的截图文字整理与来源说明 |
-| [第一版技术流程（Word）](docs/JARVIS第一版技术流程.docx) | 组内交流用的流程图及各阶段说明，π0.5 为待验证的候选 VLA |
+| [第一版技术流程（Word）](docs/JARVIS第一版技术流程.docx) | 历史参考：保留早期流程图，当前模型、训练命令与实施安排以维护中的 Markdown 为准 |
 
 ## 推进计划
 
@@ -53,6 +56,6 @@ An Embodied Agent for Collaborative Tabletop Creation and Local Editing.
 
 ## 文档维护
 
-后续以仓库 `docs/` 中的文档为维护入口。调整技术路线、接口或实施安排时，同步更新 Background、实施指南及本 README，并注明日期与版本；原始任务要求保留为课程需求依据。实施进展和实验结论应附对应代码或测试记录。
+文档职责与更新规则见 [文档导航](docs/README.md)。训练细节集中维护在 π0.5 专题，项目方案与任务清单引用它，减少多处命令相互矛盾；原始任务要求保留为课程需求依据。历史版本保留在 Git 提交记录中。
 
 GitHub：[YellowSubmariner/JARVIS-An-Embodied-Co-Creator](https://github.com/YellowSubmariner/JARVIS-An-Embodied-Co-Creator)
